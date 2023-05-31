@@ -1,3 +1,6 @@
 [submodule "LOL_rotas"]
 	path = LOL_rotas
 	url = ./LOL_rotas
+[submodule "LOL_Dragoes"]
+	path = LOL_Dragoes
+	url = git@github.com:Bonny5171/LOL_Dragoes.git
