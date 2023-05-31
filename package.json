@@ -1,0 +1,12 @@
+{
+  "name": "lol_dragoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postmerge": "cd League_of_Legends && git commit -am \"update by postmerge from subModule Dragoes\" && git push"
+  },
+  "author": "",
+  "license": "ISC"
+}
