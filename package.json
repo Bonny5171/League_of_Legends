@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postcommit": "cd ../../League_of_Legends && git commit -am \"update by postmerge from subModule Dragoes\" && git push",
-    "precommit": "echo VSFD"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
