@@ -1,7 +1,9 @@
+---
 name: Repository Dispatch Triggered
-on: 
+on:
   repository_dispatch:
-    types: [meu-evento]
+    types:
+      - meu-evento
 jobs:
   build:
     name: run-workflow
@@ -11,5 +13,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Print details repository Dispatch Triggered
-        run: |
-          echo "Workflow triggered successfully by repository dispatch action! - TESTE"
+        run: >
+          echo "Workflow triggered successfully by repository dispatch action! -
+          TESTE"
