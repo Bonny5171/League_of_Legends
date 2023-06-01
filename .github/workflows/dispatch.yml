@@ -1,18 +1,12 @@
----
-name: Repository Dispatch Triggered
+name: Repository Dispatch
 on:
   repository_dispatch:
-    types:
-      - meu-evento
+    types: [my-event]
 jobs:
-  build:
-    name: run-workflow
+  myEvent:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-      - name: Print details repository Dispatch Triggered
-        run: >
-          echo "Workflow triggered successfully by repository dispatch action! -
-          TESTE"
+          ref: ${{ github.event.client_payload.ref }}
+      - run: echo ${{ github.event.client_payload.sha }}
