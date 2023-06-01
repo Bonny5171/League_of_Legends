@@ -1,12 +1,13 @@
 name: Repository Dispatch Triggered
 
-on: [repository_dispatch]
+on: 
+  repository_dispatch:
+    types: [meu-evento]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Repository Dispatch Triggered
-        if: github.event.action == 'event-demo'
+      - name: Print details repository Dispatch Triggered
         run: |
           echo "Workflow triggered successfully by repository dispatch action! - TESTE"
