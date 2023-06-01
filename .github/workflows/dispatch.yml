@@ -6,8 +6,12 @@ on:
 
 jobs:
   build:
+    name: run-workflow
     runs-on: ubuntu-latest
     steps:
-      - name: Print details repository Dispatch Triggered
+        - uses: peter-evans/repository-dispatch@v2
+          with:
+            fetch-depth: 0
+        - name: Print details repository Dispatch Triggered
         run: |
           echo "Workflow triggered successfully by repository dispatch action! - TESTE"
