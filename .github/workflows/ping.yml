@@ -6,10 +6,23 @@ on:
   repository_dispatch:
     types: [run-ping]
 jobs:
-  pong:
+  ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@master
-      - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
+      - uses: actions/checkout@v2
+        with:
+          repository: Bonny5171/League_of_Legends
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          submodules: true
+
+      - name: Install packages
+        run: npm ci
+
+      - name: submodules recursively
+        run: git submodule update --init --recursive
+
+      # - name: Run Tests
+      #   run: npm run ping
+      #   with:
+      #     ref: ${{ github.event.client_payload.ref }}
+      # - run: echo ${{ github.event.client_payload.sha }}
