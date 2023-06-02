@@ -1,0 +1,19 @@
+name: Ping
+env:
+  owner: Bonny5171
+  repo: League_of_Legends
+on:
+  repository_dispatch:
+    types: [run-ping]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm ci
+      - name: Run Tests
+        run: npm run ping
+      #   with:
+      #     ref: ${{ github.event.client_payload.ref }}
+      # - run: echo ${{ github.event.client_payload.sha }}
