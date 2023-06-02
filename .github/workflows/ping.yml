@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          repository: Bonny5171/League_of_Legends
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          submodules: recursive
       - name: Install packages
         run: npm ci
       # - name: Run Tests
@@ -17,10 +21,5 @@ jobs:
       #   with:
       #     ref: ${{ github.event.client_payload.ref }}
       # - run: echo ${{ github.event.client_payload.sha }}
-        with:
-          repository: Bonny5171/League_of_Legends
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          submodules: recursive
-
       - name: submodules recursively
         run: git submodule update --init --recursive
