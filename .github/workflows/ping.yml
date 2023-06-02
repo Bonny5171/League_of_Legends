@@ -6,17 +6,6 @@ on:
   repository_dispatch:
     types: [run-ping]
 jobs:
-  ping:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          repository: Bonny5171/League_of_Legends
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          submodules: true
-
-      - name: Install packages
-        run: npm ci
   pong:
     runs-on: ubuntu-latest
     steps:
