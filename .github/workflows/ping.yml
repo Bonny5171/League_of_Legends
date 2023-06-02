@@ -18,8 +18,14 @@ jobs:
       - name: Install packages
         run: npm ci
 
-      - name: submodules recursively
-        run: git config --global user.email "actions@cognyhub.com" && git config --global user.name "Integration Actions" && git submodule update --recursive --remote && git commit -am "update submodules && git push"
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
+      # - name: submodules recursively
+      #   run: git config --global user.email "actions@cognyhub.com" && git config --global user.name "Integration Actions" && git submodule update --recursive --remote && git commit -am "update submodules && git push"
 
       # - name: Run Tests
       #   run: npm run ping
