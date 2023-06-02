@@ -19,7 +19,7 @@ jobs:
         run: npm ci
 
       - name: submodules recursively
-        run: git submodule update --recursive --remote && git commit -am "update submodules && git push"
+        run: git config --global user.email "actions@cognyhub.com" && git config --global user.name "Integration Actions" && git submodule update --recursive --remote && git commit -am "update submodules && git push"
 
       # - name: Run Tests
       #   run: npm run ping
