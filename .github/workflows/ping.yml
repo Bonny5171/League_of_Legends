@@ -19,10 +19,12 @@ jobs:
         run: npm ci
 
       - name: Checkout repository
-        uses: actions/checkout@master
-
+        uses: actions/checkout@v2
+        
       - name: Checkout submodules
         uses: textbook/git-checkout-submodule-action@master
+        with:
+          remote: true
 
       # - name: submodules recursively
       #   run: git config --global user.email "actions@cognyhub.com" && git config --global user.name "Integration Actions" && git submodule update --recursive --remote && git commit -am "update submodules && git push"
