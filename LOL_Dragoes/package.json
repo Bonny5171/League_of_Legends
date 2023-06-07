@@ -1,5 +1,5 @@
 {
-  "name": "lol_rotas",
+  "name": "LOL_Dragoes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bonny5171/LOL_rotas.git"
+    "url": "git+https://github.com/Bonny5171/LOL_Dragoes.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bonny5171/LOL_rotas/issues"
+    "url": "https://github.com/Bonny5171/LOL_Dragoes/issues"
   },
-  "homepage": "https://github.com/Bonny5171/LOL_rotas#readme"
+  "homepage": "https://github.com/Bonny5171/LOL_Dragoes#readme"
 }
