@@ -4,7 +4,7 @@ function sleep(timeMs) {
 
 async function loopInfinito() {
   while(true){
-    console.log("In loop: Dragoes")
+    console.log("In loop: Dragoes V2")
     await sleep(1000);
   }
 }
