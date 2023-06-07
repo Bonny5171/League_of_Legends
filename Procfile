@@ -1,6 +1,5 @@
 # release: cd LOL_Web && npm install && cd ../LOL_Dragoes && npm install && cd ../LOL_rotas && npm instal
 
-# web: node LOL_Web/index.js
 web: npm start --prefix LOL_Web
 
 worker: node LOL_Dragoes/worker.js
