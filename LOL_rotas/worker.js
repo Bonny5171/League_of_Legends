@@ -4,7 +4,7 @@ function sleep(timeMs) {
   
   async function loopInfinito() {
     while(true){
-      console.log("In loop: Rotas")
+      console.log("In loop: Rotas: V1")
       await sleep(1000);
     }
   }
