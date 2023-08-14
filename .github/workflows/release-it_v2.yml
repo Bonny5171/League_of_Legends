@@ -1,4 +1,4 @@
-name: Release & Publish via NPM
+name: Release & Publish via NPM V2
 
 on: workflow_dispatch
 jobs:
