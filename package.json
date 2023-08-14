@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Bonny5171/League_of_Legends/issues"
   },
-  "homepage": "https://github.com/Bonny5171/League_of_Legends#readme"
+  "homepage": "https://github.com/Bonny5171/League_of_Legends#readme",
+  "dependencies": {
+    "release-it": "^16.1.5"
+  }
 }
