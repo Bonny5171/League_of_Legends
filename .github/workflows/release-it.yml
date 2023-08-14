@@ -19,7 +19,7 @@ jobs:
 
       - name: Inicializa usuario Git
         run: |
-            git config --global user.email "actions@cognyhub.com"
+            git config --global user.email "luis.city@gmail.com"
             git config --global user.name "Actions Release Workflow"
 
       - name: Run release
