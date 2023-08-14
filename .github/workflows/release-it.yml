@@ -4,9 +4,9 @@ env:
   repo: League_of_Legends
 on:
   repository_dispatch:
-    types: [run-ping]
+    types: [run-release]
 jobs:
-  ping:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,20 +17,13 @@ jobs:
       - name: Install packages
         run: npm ci
 
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Inicializa usuario Git
+        run: |
+            git config --global user.email "actions@cognyhub.com"
+            git config --global user.name "Actions Release Workflow"
+
+      - name: Run release
+        run: npm run release --ci
 
       - name: End message
         run: echo 'All done!'
-
-      # - name: Checkout submodules
-      #   run: git submodule update --init --recursive
-
-      # - name: submodules recursively
-      #   run: git config --global user.email "actions@cognyhub.com" && git config --global user.name "Integration Actions" && git submodule update --recursive --remote && git commit -am "update submodules && git push"
-
-      # - name: Run Tests
-      #   run: npm run ping
-      #   with:
-      #     ref: ${{ github.event.client_payload.ref }}
-      # - run: echo ${{ github.event.client_payload.sha }}
